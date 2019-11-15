@@ -1,0 +1,13 @@
+Package: phenorice
+Type: Package
+Title: phenorice
+Version: 0.1-1
+Date: 2019-11-04
+Imports: signal
+SystemRequirements: C++11
+Authors@R: c(person("Hongfei", "Wang", role = "aut"),
+			 person("Aniruddha", "Ghosh", role = "aut"),
+			 person("Robert J.", "Hijmans", email = "r.hijmans@gmail.com", role = "cre"))
+Maintainer: Robert J. Hijmans <r.hijmans@gmail.com>
+Description: An implementation of phenorice algorithm to detect rice crops from remote sensing data.
+License: GPL (>=2) 
