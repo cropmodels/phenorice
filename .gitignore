@@ -24,12 +24,8 @@ symbols.rds
 *.x86_64
 *.hex
 
-# TTUTIL tmp files
-*.tmp
-
 # zip files
 *.zip
-
 
 *.tar.gz
 *Rcheck/
@@ -41,9 +37,6 @@ symbols.rds
 *.Rproj.user
 *.Rbuildignore
 *.Rproj
-RWofost/src-i386/
-RWofost/src-x64/
 .Rproj.user
 
-Cwofost/.idea/
 .DS_Store
