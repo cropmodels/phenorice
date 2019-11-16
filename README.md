@@ -1,7 +1,8 @@
 # phenorice
 
-Implementation of the phenorice model. 
+This is an R package with an implementation of the phenorice model. You can install it like this
 
 
-```devtools::install_bitbucket("hijmans-lab/phenocrop/phenorice", auth_user = bitbucket_user, password = bitbucket_pass)```
+source("https://install-github.me/cropmodels/phenorice")
+
 
