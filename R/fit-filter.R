@@ -1,7 +1,7 @@
 ### Fit index
 
 # Fill NAs by fiting with a smoothing spline
-fill_VI <- function(x) {
+pheno_fill_VI <- function(x) {
     # To omit pixel if it has a lot of NA values
     if (length(which(is.na(x))) > length(x)*0.75) return(x)
 	
@@ -16,9 +16,9 @@ fill_VI <- function(x) {
 }
 
 # Smooth of time-series data using Savitzky-Golay filter
-filter_VI <- function(x){
+pheno_filter_VI <- function(x){
 
-	x <- fillVI(x)
+	x <- pheno_fill_VI(x)
 	if (any(is.na(x))) return(x)
 	# Smooth x
 	evisgfit <- signal::sgolayfilt(x, p = 4, n = 13, m = 0) 
