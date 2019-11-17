@@ -15,10 +15,10 @@ phenorice(evi, ndfi, lst, p, checkLST=TRUE)
 }
 
 \arguments{
- \item{evi}{vector with evi values} 
- \item{ndfi}{vector with ndfi values} 
- \item{lst}{vector with lst values} 
- \item{p}{list with named parameters}
+ \item{evi}{numeric, rasterstack or SpatRaster with evi values} 
+ \item{ndfi}{numeric, rasterstack or SpatRaster with ndfi values} 
+ \item{lst}{numeric, rasterstack or SpatRaster with lst values} 
+ \item{p}{list with named parameters based on phenorice method}
  \item{checkLST}{boolean. If \code{TRUE} the LST is used}
 }
 
@@ -26,9 +26,21 @@ phenorice(evi, ndfi, lst, p, checkLST=TRUE)
 \details{
 \tabular{lll}{
 	\tab \bold{Parameters} \tab \bold{Explanation} \cr
-	\tab \code{x} \tab bla bla  \cr
-	\tab \code{y} \tab bla bla  \cr
-}
+	\tab \code{evi_meanth} \tab threshold for annual mean EVI \cr
+	\tab \code{evi_maxth} \tab threshold for maximum EVI  \cr
+	\tab \code{evi_minth} \tab threshold for minimum EVI \cr
+	\tab \code{pos_start} \tab start of heading \cr
+	\tab \code{pos_end} \tab end of heading \cr
+	\tab \code{vl1} \tab shortest vegetative growth length \cr
+	\tab \code{vl2} \tab longest vegetative growth length \cr
+	\tab \code{winfl} \tab period for flooding  \cr
+	\tab \code{minndfi} \tab threshold for NDFI  \cr
+	\tab \code{windecr} \tab period after EVI maximum  \cr
+	\tab \code{decr} \tab percent decrease of EVI after EVI maximum  \cr
+	\tab \code{tl1} \tab shortest total growing length  \cr
+	\tab \code{tl2} \tab longest total growing length  \cr
+	\tab \code{lst_th} \tab minmum land surface temperature for planting, needs \code{checkLST=TRUE}  \cr
+  }
 }
 
 

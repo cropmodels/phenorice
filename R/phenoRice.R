@@ -94,14 +94,14 @@ phenorice <- function(evi, ndfi, p, lst,...){
   if(missing(lst)) checkLST = FALSE
   
   # output for single season rice
-	rice <- cbind(NA, NA, NA, NA, NA)
+  rice <- cbind(0, 0, 0, 0, 0)
 	if (any(is.na(evi))) return(rice)
 	#if (any(is.na(ndfi))) return(rice)
 	if(checkLST){
 	  if (any(is.na(lst))) return(rice)
 	}
 
-	rice <- cbind(0, 0, 0, 0, 0)
+	# rice <- cbind(0, 0, 0, 0, 0)
 	
 	# check if mean evi is not too high
 	if (mean(evi) > p$evi_meanth) return(rice)
@@ -153,6 +153,8 @@ phenorice <- function(evi, ndfi, p, lst,...){
 	if (nrow(dates) == 0) {
 		return(rice)
 	} else {
+	  # even if rice fails, min and max should be returned
+	  rice <- c(dates, 0, 0, 0)
 	  # Flowering date 
 	  flowering <- stats::median((dates[1]:length(evi))[evi[dates[1]:length(evi)] >= (evi[dates[2]] - (0.1*(evi[dates[2]]-evi[dates[1]])))])
 	  # Heading date
