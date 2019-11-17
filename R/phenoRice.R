@@ -186,7 +186,7 @@ getPars <- function() {
 	pars$decr <- 0.7 # percent decrease of EVI after EVI maximum
 	pars$tl1 <- 13 # the shortest total growing length
 	pars$tl2 <- 23 # the longest total growing length
-	pars$lst_th <- 15 # the minmum temperature for planting 
+	pars$lst_th <- 15 # the minimum temperature for planting 
 	pars
 }
 
